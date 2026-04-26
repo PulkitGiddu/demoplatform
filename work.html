@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/base.css" />
   <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/insights-section.css" />
   <link rel="stylesheet" href="/css/marquee.css" />
   <link rel="stylesheet" href="/css/footer.css" />
   <link rel="stylesheet" href="/css/popup.css" />
@@ -27,6 +28,7 @@
       align-items: flex-start;
       gap: var(--space-2xl);
       flex-wrap: wrap;
+      margin-top: var(--space-lg);
     }
 
     .work-hero h1 {
@@ -37,7 +39,6 @@
       line-height: 0.92;
       letter-spacing: -0.02em;
       color: var(--color-text);
-      margin-top: var(--space-lg);
     }
 
     .work-filters {
@@ -45,7 +46,7 @@
       gap: var(--space-sm);
       flex-wrap: wrap;
       align-items: baseline;
-      margin-top: var(--space-lg);
+      padding-top: var(--space-xs);
     }
 
     .work-filter-btn {
@@ -112,7 +113,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: var(--space-lg);
-      padding: 0 var(--container-padding) var(--space-section);
+      padding-bottom: var(--space-section);
     }
 
     .work-card {
@@ -242,31 +243,71 @@
       </div>
     </section>
 
-    <div class="work-view-toggle reveal">
-      <button class="view-btn" title="List view">☰</button>
-      <button class="view-btn active" title="Grid view">⊞</button>
-    </div>
+    <section class="work-section">
+      <div class="container">
+        <div class="work-grid">
+          <a href="#" class="blog-card reveal">
+            <div class="blog-card-image"><img src="/images/bigissue-mockup.png" alt="The Big Issue" loading="lazy" /></div>
+            <div class="blog-card-body">
+              <h3 class="blog-card-title">The Big Issue: A bold digital platform for social change and street journalism</h3>
+              <div class="blog-card-footer">
+                <span class="blog-card-tag">Websites</span>
+              </div>
+            </div>
+          </a>
 
-    <section class="work-grid">
-      <a href="#" class="work-card work-card--red reveal">
-        <div class="work-card-image"><img src="/images/bigissue-mockup.png" alt="The Big Issue" loading="lazy" /></div>
-      </a>
-      <a href="#" class="work-card reveal reveal-delay-1">
-        <div class="work-card-image"><img src="/images/groupaccommodation-mockup.png" alt="Group Accommodation"
-            loading="lazy" /></div>
-      </a>
-      <a href="#" class="work-card work-card--purple reveal reveal-delay-2">
-        <div class="work-card-image"><img src="/images/chequp-mockup.png" alt="ChequP" loading="lazy" /></div>
-      </a>
-      <a href="#" class="work-card reveal">
-        <div class="work-card-image"><img src="/images/floresco-mockup.png" alt="Floresco" loading="lazy" /></div>
-      </a>
-      <a href="#" class="work-card work-card--olive reveal reveal-delay-1">
-        <div class="work-card-image"><img src="/images/workroom-mockup.png" alt="WorkRoom" loading="lazy" /></div>
-      </a>
-      <a href="#" class="work-card work-card--teal reveal reveal-delay-2">
-        <div class="work-card-image"><img src="/images/team-photo.png" alt="Forward Studio" loading="lazy" /></div>
-      </a>
+          <a href="#" class="blog-card reveal reveal-delay-1">
+            <div class="blog-card-image"><img src="/images/groupaccommodation-mockup.png" alt="Group Accommodation" loading="lazy" /></div>
+            <div class="blog-card-body">
+              <h3 class="blog-card-title">Group Accommodation: A leading group travel platform, continuously evolving for scale</h3>
+              <div class="blog-card-footer">
+                <span class="blog-card-tag">Software</span>
+                <span class="blog-card-tag">Websites</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card reveal reveal-delay-2">
+            <div class="blog-card-image"><img src="/images/chequp-mockup.png" alt="ChequP" loading="lazy" /></div>
+            <div class="blog-card-body">
+              <h3 class="blog-card-title">ChequP: A health-tech platform making wellness checks accessible to all</h3>
+              <div class="blog-card-footer">
+                <span class="blog-card-tag">Websites</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card reveal">
+            <div class="blog-card-image"><img src="/images/floresco-mockup.png" alt="Floresco" loading="lazy" /></div>
+            <div class="blog-card-body">
+              <h3 class="blog-card-title">Floresco: An elegant digital home for holistic wellbeing and mindful living</h3>
+              <div class="blog-card-footer">
+                <span class="blog-card-tag">Websites</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card reveal reveal-delay-1">
+            <div class="blog-card-image"><img src="/images/workroom-mockup.png" alt="WorkRoom" loading="lazy" /></div>
+            <div class="blog-card-body">
+              <h3 class="blog-card-title">WorkRoom: A flexible workspace platform built for community and growth</h3>
+              <div class="blog-card-footer">
+                <span class="blog-card-tag">Websites</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card reveal reveal-delay-2">
+            <div class="blog-card-image"><img src="/images/team-photo.png" alt="Forward Studio" loading="lazy" /></div>
+            <div class="blog-card-body">
+              <h3 class="blog-card-title">Forward Studio: A creative digital space for brand growth</h3>
+              <div class="blog-card-footer">
+                <span class="blog-card-tag">Design</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
 
     <section class="marquee-section marquee-section--teal" id="marquee">
