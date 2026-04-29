@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start Your Project - Wynklo</title>
+  <meta name="description" content="Start your digital journey with Wynklo. Tell us about your app or website idea." />
+  <link rel="stylesheet" href="/css/variables.css" />
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="stylesheet" href="/css/popup.css" />
+  <link rel="stylesheet" href="/css/wizard.css" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🍑</text></svg>" />
+</head>
+
+<body>
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">Wynklo</a>
+      <nav class="nav-desktop" id="nav-desktop">
+        <a href="/work.html" class="nav-link" data-chars>Work</a>
+        <a href="/about.html" class="nav-link" data-chars>About</a>
+        <button class="nav-link nav-link-services" id="services-toggle" data-chars>Services <span
+            class="chevron">▾</span></button>
+        <a href="/insights.html" class="nav-link" data-chars>Insights</a>
+        <a href="/contact.html" class="nav-link" data-chars>Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle"
+        aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="wizard-section">
+    <div class="container">
+      
+      <!-- Stepper -->
+      <div class="wizard-stepper" id="wizard-stepper">
+        <div class="step-indicator active" data-step="1">
+          <div class="step-number">1</div>
+          <span class="step-label">Category</span>
+        </div>
+        <div class="step-indicator" data-step="2">
+          <div class="step-number">2</div>
+          <span class="step-label">Details</span>
+        </div>
+        <div class="step-indicator" data-step="3">
+          <div class="step-number">3</div>
+          <span class="step-label">Features</span>
+        </div>
+        <div class="step-indicator" data-step="4">
+          <div class="step-number">4</div>
+          <span class="step-label">Preview</span>
+        </div>
+        <div class="step-indicator" data-step="5">
+          <div class="step-number">5</div>
+          <span class="step-label">Contact</span>
+        </div>
+      </div>
+
+      <!-- Step 1: Category -->
+      <div class="wizard-step-content active" id="step-1">
+        <div class="wizard-header">
+          <h2>What are we building?</h2>
+          <p>Select the platform for your next big idea.</p>
+        </div>
+        <div class="option-grid platform-grid">
+          <div class="option-card platform-card" data-platform="app">
+            <div class="option-icon">📱</div>
+            <div class="option-title">Mobile App</div>
+          </div>
+          <div class="option-card platform-card" data-platform="web">
+            <div class="option-icon">💻</div>
+            <div class="option-title">Website</div>
+          </div>
+          <div class="option-card platform-card" data-platform="both">
+            <div class="option-icon">🚀</div>
+            <div class="option-title">Both</div>
+          </div>
+        </div>
+
+        <div class="wizard-header" style="margin-top: 3rem; margin-bottom: 1.5rem;">
+          <h2 style="font-size: 1.8rem;">We build for every kind of business</h2>
+        </div>
+        
+        <div class="business-grid">
+          <div class="business-card" data-business="food">
+            <div class="business-icon">🍔</div>
+            <div class="business-info">
+              <h4>Food & Restaurant</h4>
+              <p>Menus, orders, delivery</p>
+            </div>
+          </div>
+          <div class="business-card" data-business="salon">
+            <div class="business-icon">💇</div>
+            <div class="business-info">
+              <h4>Salon & Beauty</h4>
+              <p>Bookings, services, staff</p>
+            </div>
+          </div>
+          <div class="business-card" data-business="ecommerce">
+            <div class="business-icon">🛍️</div>
+            <div class="business-info">
+              <h4>E-Commerce</h4>
+              <p>Catalogue, cart, checkout</p>
+            </div>
+          </div>
+          <div class="business-card" data-business="gym">
+            <div class="business-icon">🏋️</div>
+            <div class="business-info">
+              <h4>Gym & Fitness</h4>
+              <p>Memberships, classes, trainers</p>
+            </div>
+          </div>
+          <div class="business-card" data-business="education">
+            <div class="business-icon">📚</div>
+            <div class="business-info">
+              <h4>Education</h4>
+              <p>Courses, enrollment, results</p>
+            </div>
+          </div>
+          <div class="business-card" data-business="realestate">
+            <div class="business-icon">🏠</div>
+            <div class="business-info">
+              <h4>Real Estate</h4>
+              <p>Listings, inquiries, tours</p>
+            </div>
+          </div>
+          <div class="business-card" data-business="portfolio">
+            <div class="business-icon">💼</div>
+            <div class="business-info">
+              <h4>Portfolio/Agency</h4>
+              <p>Work showcase, contact, leads</p>
+            </div>
+          </div>
+          <div class="business-card" data-business="clinic">
+            <div class="business-icon">🏥</div>
+            <div class="business-info">
+              <h4>Clinic</h4>
+              <p>Appointments, records, doctors</p>
+            </div>
+          </div>
+          <div class="business-card" data-business="events">
+            <div class="business-icon">🎉</div>
+            <div class="business-info">
+              <h4>Events</h4>
+              <p>Ticketing, RSVP, schedules</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Details -->
+      <div class="wizard-step-content" id="step-2">
+        <div class="wizard-header">
+          <h2>Tell us about your business</h2>
+          <p>Give us some context so we can tailor the experience.</p>
+        </div>
+        <div class="wizard-form">
+          <div class="form-group">
+            <label for="businessName">Business Name / Project Name</label>
+            <input type="text" id="businessName" class="wizard-input" placeholder="e.g. Wynklo Tech" />
+          </div>
+          <div class="form-group">
+            <label for="location">Where are you located?</label>
+            <input type="text" id="location" class="wizard-input" placeholder="e.g. New York, USA" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Features -->
+      <div class="wizard-step-content" id="step-3">
+        <div class="wizard-header">
+          <h2>What features do you need?</h2>
+          <p>Select the basic features you require, and tell us any specifics.</p>
+        </div>
+        
+        <div class="features-list" id="dynamic-features">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <div class="form-group" style="margin-top: 2rem;">
+          <label for="specificRequirements">Specific Requirements (Optional)</label>
+          <textarea id="specificRequirements" class="wizard-textarea" placeholder="Tell us more about custom features or unique workflows..."></textarea>
+        </div>
+      </div>
+
+      <!-- Step 4: Preview -->
+      <div class="wizard-step-content" id="step-4">
+        
+        <!-- Loading Animation -->
+        <div class="ai-loading-container" id="ai-loading">
+          <div class="ai-spinner">
+            <div class="spinner-ring"></div>
+            <div class="spinner-core"></div>
+          </div>
+          <h3 class="ai-loading-text">Generating AI Preview...</h3>
+          <p>Synthesizing your requirements into an interface.</p>
+        </div>
+
+        <!-- Interactive Mockup (Hidden initially) -->
+        <div class="interactive-mockup-container" id="interactive-mockup" style="display: none;">
+          <div class="wizard-header">
+            <h2>Your First Look</h2>
+            <p>Try out the interactive wireframes we've generated for you.</p>
+          </div>
+          
+          <div class="mockup-devices-wrapper" id="mockup-devices-wrapper">
+            
+            <!-- Phone Mockup -->
+            <div class="phone-mockup" id="device-phone">
+              <div class="phone-notch"></div>
+              <div class="phone-screen" id="mockup-screen-phone">
+                <!-- Header -->
+                <div class="mockup-header">
+                  <span class="mockup-menu">☰</span>
+                  <h4 class="mockup-title">App Name</h4>
+                  <span class="mockup-profile">👤</span>
+                </div>
+                
+                <!-- Content Views -->
+                <div class="mockup-content-wrapper">
+                  <!-- View: Home -->
+                  <div class="mockup-view active mockup-view-home">
+                    <div class="mockup-hero">Hero Section</div>
+                    <div class="mockup-list mockup-home-list" style="margin-bottom: 15px;">
+                      <!-- Populated dynamically -->
+                    </div>
+                    <button class="mockup-btn mockup-action-btn">Action Button</button>
+                  </div>
+
+                  <!-- View: Features -->
+                  <div class="mockup-view mockup-view-features">
+                    <h5 style="margin-bottom: 15px; font-family: var(--font-heading);">Included Features</h5>
+                    <div class="mockup-list mockup-features-list">
+                      <!-- Populated dynamically -->
+                    </div>
+                  </div>
+
+                  <!-- View: Profile/Settings -->
+                  <div class="mockup-view mockup-view-settings">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                      <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(255,255,255,0.1);"></div>
+                      <div>
+                        <div class="mockup-line short" style="margin-bottom: 8px;"></div>
+                        <div class="mockup-line long"></div>
+                      </div>
+                    </div>
+                    <div class="mockup-list">
+                      <div class="mockup-list-item" style="background: rgba(255,255,255,0.02); padding: 10px; border-radius: 8px;"><span style="margin-right: 10px;">🔔</span> Notifications</div>
+                      <div class="mockup-list-item" style="background: rgba(255,255,255,0.02); padding: 10px; border-radius: 8px;"><span style="margin-right: 10px;">🔒</span> Privacy</div>
+                      <div class="mockup-list-item" style="background: rgba(255,255,255,0.02); padding: 10px; border-radius: 8px;"><span style="margin-right: 10px;">❓</span> Support</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bottom Nav -->
+                <div class="mockup-bottom-nav">
+                  <div class="mockup-nav-item active" data-target="mockup-view-home" data-device="phone">⌂</div>
+                  <div class="mockup-nav-item" data-target="mockup-view-features" data-device="phone">★</div>
+                  <div class="mockup-nav-item" data-target="mockup-view-settings" data-device="phone">⚙</div>
+                </div>
+                
+                <!-- Interaction Toast -->
+                <div class="mockup-toast">Action Completed!</div>
+              </div>
+            </div>
+
+            <!-- Mac Mockup -->
+            <div class="mac-mockup" id="device-mac" style="display: none;">
+              <div class="mac-topbar">
+                <div class="mac-traffic-lights">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mac-address-bar">https://wynklo.com/preview</div>
+              </div>
+              <div class="mac-screen" id="mockup-screen-mac">
+                <!-- Header / Navbar -->
+                <div class="mac-header">
+                  <h4 class="mockup-title">Website Name</h4>
+                  <div class="mac-nav">
+                    <span class="mockup-nav-item active" data-target="mockup-view-home" data-device="mac">Home</span>
+                    <span class="mockup-nav-item" data-target="mockup-view-features" data-device="mac">Features</span>
+                    <span class="mockup-nav-item" data-target="mockup-view-settings" data-device="mac">Admin</span>
+                  </div>
+                </div>
+
+                <!-- Content Views -->
+                <div class="mockup-content-wrapper">
+                  <!-- View: Home -->
+                  <div class="mockup-view active mockup-view-home">
+                    <div class="mac-split">
+                      <div class="mac-split-left">
+                        <div class="mockup-hero" style="height: 150px; text-align: left; justify-content: flex-start; padding: 20px; font-size: 2rem;">Hero Section</div>
+                        <button class="mockup-btn mockup-action-btn" style="width: auto; display: inline-block;">Action Button</button>
+                      </div>
+                      <div class="mac-split-right">
+                        <div class="mockup-list mockup-home-list">
+                          <!-- Populated dynamically -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- View: Features -->
+                  <div class="mockup-view mockup-view-features">
+                    <h5 style="margin-bottom: 20px; font-family: var(--font-heading); font-size: 1.5rem;">Included Features</h5>
+                    <div class="mockup-list mockup-features-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                      <!-- Populated dynamically -->
+                    </div>
+                  </div>
+
+                  <!-- View: Profile/Settings -->
+                  <div class="mockup-view mockup-view-settings">
+                    <div class="mac-split">
+                      <div class="mac-split-left" style="flex: 0.3;">
+                        <div class="mockup-list">
+                          <div class="mockup-list-item" style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px;">Dashboard</div>
+                          <div class="mockup-list-item" style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 8px;">Analytics</div>
+                          <div class="mockup-list-item" style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 8px;">Settings</div>
+                        </div>
+                      </div>
+                      <div class="mac-split-right" style="flex: 0.7;">
+                        <div style="background: rgba(255,255,255,0.02); height: 200px; border-radius: 12px; margin-bottom: 20px;"></div>
+                        <div style="display: flex; gap: 20px;">
+                          <div style="background: rgba(255,255,255,0.02); height: 100px; flex: 1; border-radius: 12px;"></div>
+                          <div style="background: rgba(255,255,255,0.02); height: 100px; flex: 1; border-radius: 12px;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Interaction Toast -->
+                <div class="mockup-toast">Action Completed!</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Step 5: Contact -->
+      <div class="wizard-step-content" id="step-5">
+        <div class="wizard-header">
+          <h2>Let's make it happen</h2>
+          <p>Leave your details and we'll get back to you within 24 hours.</p>
+        </div>
+        <div class="wizard-form">
+          <div class="form-group">
+            <label for="contactName">Full Name</label>
+            <input type="text" id="contactName" class="wizard-input" placeholder="John Doe" />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email Address</label>
+            <input type="email" id="contactEmail" class="wizard-input" placeholder="john@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="contactPhone">Phone Number</label>
+            <input type="tel" id="contactPhone" class="wizard-input" placeholder="+1 (555) 000-0000" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="wizard-controls">
+        <button class="wizard-btn" id="btn-prev" style="visibility: hidden;">Back</button>
+        <button class="wizard-btn primary" id="btn-next" disabled>Next Step</button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="footer-links"><a href="/">Home</a><a href="/work.html">Work</a><a
+              href="/insights.html">Insights</a><a href="/about.html">About</a><a href="#">Locations</a></div>
+        </div>
+        <div class="footer-column">
+          <div class="footer-links"><a href="#">Web Design</a><a href="#">Web Development</a><a href="#">Digital
+              Platforms</a><a href="#">Agency Partnerships</a><a href="#">All Services</a></div>
+        </div>
+        <div class="footer-column">
+          <div class="footer-links"><a href="/contact.html">Contact</a><a href="#">Careers</a><a href="#">LinkedIn</a><a
+              href="#">Facebook</a></div>
+        </div>
+        <div class="footer-column">
+          <div class="footer-contact">
+            <p class="footer-address">Studio B.15, The Old Church School,<br />Butts Hill, Frome,<br />BA11 1HR</p>
+            <div class="footer-contact-links"><a href="mailto:contact@wynklo.in">contact@wynklo.in</a><a
+                href="tel:01373476446">01373 476446</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span class="footer-copyright">&copy;2026 Wynklo</span>
+        <div class="footer-legal"><a href="#">Cookie Policy</a><span class="footer-legal-sep">/</span><a
+            href="#">Privacy Policy</a><span class="footer-legal-sep">/</span><a href="#">Sitemap</a></div>
+      </div>
+    </div>
+    <div class="footer-watermark" aria-hidden="true">W<span>y</span>nkl<span>o</span></div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/wizard.js"></script>
+</body>
+</html>
