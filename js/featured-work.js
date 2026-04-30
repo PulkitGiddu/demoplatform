@@ -1,5 +1,5 @@
 /* ========================================
-   Yellow Peach — Featured Work Scroll Effect
+   Wynklo — Featured Work Scroll Effect
    + Cursor-following "View All Work" on hero image
    ======================================== */
 

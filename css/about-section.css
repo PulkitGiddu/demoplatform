@@ -1,5 +1,5 @@
 /* ========================================
-   Yellow Peach — About Section
+   Wynklo — About Section
    ======================================== */
 
 .about-section {
@@ -124,7 +124,7 @@
   align-items: center;
 }
 
-.zyntrix-intro-text h2, 
+.zyntrix-intro-text h2,
 .zyntrix-story h2,
 .zyntrix-values-header h2 {
   font-family: var(--font-heading);
@@ -240,11 +240,11 @@
   .zyntrix-intro-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .zyntrix-values-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .zyntrix-story {
     padding: var(--space-xl);
   }

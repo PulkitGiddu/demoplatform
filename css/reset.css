@@ -1,8 +1,10 @@
 /* ========================================
-   Yellow Peach — CSS Reset
+   Wynklo — CSS Reset
    ======================================== */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -40,17 +42,24 @@ body::before {
 }
 
 /* Ensure all direct children sit above the noise */
-body > * {
+body>* {
   position: relative;
   z-index: 1;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
   color: inherit;
 }
@@ -60,11 +69,17 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.05;
   font-weight: 800;
 }

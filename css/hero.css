@@ -1,5 +1,5 @@
 /* ========================================
-   Yellow Peach — Hero Section
+   Wynklo — Hero Section
    ======================================== */
 
 .hero {
@@ -48,7 +48,8 @@
   overflow: hidden;
   position: relative;
   aspect-ratio: 16 / 7;
-  cursor: none; /* hide default cursor for custom follower */
+  cursor: none;
+  /* hide default cursor for custom follower */
   margin-bottom: var(--space-3xl);
 }
 
@@ -81,7 +82,8 @@
   color: var(--color-bg);
   border: none;
   cursor: none;
-  pointer-events: none; /* let mouse events pass through to parent */
+  pointer-events: none;
+  /* let mouse events pass through to parent */
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.8);
   transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
@@ -171,8 +173,13 @@
 }
 
 @keyframes logos-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ── Featured Work Sticky Section ── */

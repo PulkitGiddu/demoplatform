@@ -1,5 +1,5 @@
 /* ========================================
-   Yellow Peach — Navigation Interactions
+   Wynklo — Navigation Interactions
    ======================================== */
 
 export function initNav() {
@@ -43,11 +43,11 @@ export function initNav() {
   document.querySelectorAll('[data-chars]').forEach(el => {
     const text = el.childNodes[0]?.textContent?.trim();
     if (!text) return;
-    
+
     // Preserve any child elements (like chevron spans)
     const children = Array.from(el.children);
     el.textContent = '';
-    
+
     text.split('').forEach((char, i) => {
       const span = document.createElement('span');
       span.className = 'char';
@@ -55,7 +55,7 @@ export function initNav() {
       span.style.animationDelay = `${i * 0.02}s`;
       el.appendChild(span);
     });
-    
+
     // Re-append child elements
     children.forEach(child => {
       el.appendChild(document.createTextNode(' '));
@@ -76,9 +76,9 @@ export function initNav() {
       });
       if (arrow) {
         if (currentPage === pages.length - 1) {
-           arrow.style.transform = 'translateY(-50%) rotate(180deg)';
+          arrow.style.transform = 'translateY(-50%) rotate(180deg)';
         } else {
-           arrow.style.transform = 'translateY(-50%) rotate(0deg)';
+          arrow.style.transform = 'translateY(-50%) rotate(0deg)';
         }
       }
     };
@@ -137,7 +137,7 @@ export function initNav() {
         closeMegaMenu();
       }
     });
-    
+
     // Also close if clicking exactly on the yellow background
     megaMenu.addEventListener('click', (e) => {
       if (e.target === megaMenu || e.target === document.getElementById('mega-menu-slider')) {

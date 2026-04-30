@@ -1,5 +1,5 @@
 /* ========================================
-   Yellow Peach — Marquee CTA Banner
+   Wynklo — Marquee CTA Banner
    ======================================== */
 
 .marquee-section {
@@ -68,6 +68,7 @@
 .marquee-section--green {
   background: #3a9b5c;
 }
+
 .marquee-section--green .marquee-btn:hover {
   color: #3a9b5c;
 }
@@ -76,6 +77,7 @@
 .marquee-section--pink {
   background: var(--color-pink);
 }
+
 .marquee-section--pink .marquee-btn:hover {
   color: var(--color-pink);
 }
@@ -84,6 +86,7 @@
 .marquee-section--teal {
   background: #2d8f7b;
 }
+
 .marquee-section--teal .marquee-btn:hover {
   color: #2d8f7b;
 }
@@ -92,6 +95,7 @@
 .marquee-section--red {
   background: #c23a3a;
 }
+
 .marquee-section--red .marquee-btn:hover {
   color: #c23a3a;
 }
@@ -100,6 +104,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }

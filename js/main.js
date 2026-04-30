@@ -1,5 +1,5 @@
 /* ========================================
-   Yellow Peach — Main Entry Point
+   Wynklo — Main Entry Point
    ======================================== */
 
 import { initNav } from './nav.js';

@@ -1,5 +1,5 @@
 /* ========================================
-   Yellow Peach — Project Showcase Cards
+   Wynklo — Project Showcase Cards
    ======================================== */
 
 .projects-section {
@@ -22,7 +22,7 @@
 }
 
 /* Each card overlaps the previous one, creating a stacking effect */
-.project-card + .project-card {
+.project-card+.project-card {
   margin-top: -2rem;
 }
 
@@ -167,7 +167,7 @@
   transform: scale(1.2);
 }
 
-.project-card-image > img {
+.project-card-image>img {
   position: relative;
   z-index: 1;
 }
@@ -209,7 +209,7 @@
 }
 
 .project-card--olive .project-card-stats {
-  border-top-color: rgba(0,0,0,0.2);
+  border-top-color: rgba(0, 0, 0, 0.2);
 }
 
 /* ── Responsive ── */
@@ -222,7 +222,7 @@
     margin-bottom: var(--space-lg);
   }
 
-  .project-card + .project-card {
+  .project-card+.project-card {
     margin-top: 0;
   }
 
