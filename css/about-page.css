@@ -158,6 +158,7 @@
   border-right: 1px solid rgba(243, 241, 231, 0.04);
   display: flex;
   flex-direction: column;
+  min-width: 0; /* Constraint for grid track columns */
 }
 
 .pane-header {
@@ -198,8 +199,9 @@
   font-family: 'Space Mono', 'Fira Code', var(--font-mono, monospace);
   font-size: 0.85rem;
   line-height: 1.6;
-  overflow-x: auto;
+  overflow: hidden; /* Hide outer overflow and let code-content scroll */
   flex-grow: 1;
+  min-width: 0; /* Constraint for flex children */
 }
 
 .line-numbers {
@@ -209,12 +211,60 @@
   padding-right: 20px;
   color: rgba(243, 241, 231, 0.2);
   user-select: none;
+  flex-shrink: 0; /* Do not let line numbers shrink */
 }
 
 .code-content {
   margin: 0;
   color: rgba(243, 241, 231, 0.85);
   flex-grow: 1;
+  overflow-x: auto; /* Enable horizontal scrolling specifically on code text */
+  min-width: 0; /* Allow the preformatted text container to shrink below content width */
+  -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile devices */
+}
+
+/* Code Scrollbar Customization */
+.code-content::-webkit-scrollbar {
+  height: 6px;
+}
+
+.code-content::-webkit-scrollbar-track {
+  background: rgba(243, 241, 231, 0.02);
+  border-radius: 3px;
+}
+
+.code-content::-webkit-scrollbar-thumb {
+  background: rgba(253, 208, 17, 0.25);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.code-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(253, 208, 17, 0.45);
+}
+
+.code-content {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(253, 208, 17, 0.25) rgba(243, 241, 231, 0.02);
+}
+
+@media (max-width: 768px) {
+  .code-editor {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .code-editor {
+    padding: 12px;
+  }
+  .line-numbers {
+    padding-right: 12px;
+  }
+  .pane-header .tab {
+    padding: 8px 12px;
+    font-size: 0.72rem;
+  }
 }
 
 /* Syntax Highlighting */
