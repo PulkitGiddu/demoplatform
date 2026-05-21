@@ -1,4 +1,4 @@
-# Wynklo — robots.txt
+# Wynklo - robots.txt
 # https://www.wynklo.com/
 
 User-agent: *

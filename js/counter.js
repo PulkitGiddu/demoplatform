@@ -1,5 +1,5 @@
 /* ========================================
-   Wynklo — Counter Animation
+   Wynklo - Counter Animation
    ======================================== */
 
 export function initCounter() {

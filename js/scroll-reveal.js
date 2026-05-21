@@ -1,5 +1,5 @@
 /* ========================================
-   Wynklo — Scroll Reveal Animations
+   Wynklo - Scroll Reveal Animations
    ======================================== */
 
 export function initScrollReveal() {

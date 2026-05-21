@@ -1,5 +1,5 @@
 // ========================================
-// Wynklo — Multi-Step Wizard Logic
+// Wynklo - Multi-Step Wizard Logic
 // ========================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -397,10 +397,10 @@ Submitted via Start Your Project wizard`
     console.log("🚀 Project Submission Payload:", payload);
 
     // Use relative URL in production, localhost in development
-    const apiUrl = window.location.hostname === 'localhost' 
+    const apiUrl = window.location.hostname === 'localhost'
       ? 'http://localhost:3000/api/contact'
       : '/api/contact';
-    
+
     try {
       const response = await fetch(apiUrl, {
         method: 'POST',
@@ -409,9 +409,9 @@ Submitted via Start Your Project wizard`
         },
         body: JSON.stringify(payload)
       });
-      
+
       const result = await response.json();
-      
+
       if (result.success) {
         alert("Thank you! Your project request has been submitted successfully. We'll be in touch soon!");
         window.location.href = "/";

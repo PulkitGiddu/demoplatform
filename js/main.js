@@ -1,5 +1,5 @@
 /* ========================================
-   Wynklo — Main Entry Point
+   Wynklo - Main Entry Point
    ======================================== */
 
 import { initPreloader } from './preloader.js';
@@ -9,6 +9,7 @@ import { initCounter } from './counter.js';
 import { initPopup } from './popup.js';
 import { initFeaturedWork } from './featured-work.js';
 import { initCareersToast } from './careers.js';
+import { initInsightsToast } from './insights.js';
 import { initContactForm } from './contact.js';
 
 // Initialize preloader immediately (before DOMContentLoaded)
@@ -22,5 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initPopup();
   initFeaturedWork();
   initCareersToast();
+  initInsightsToast();
   initContactForm();
 });

@@ -1,5 +1,5 @@
 /* ========================================
-   Wynklo — Footer
+   Wynklo - Footer
    ======================================== */
 
 .site-footer {
@@ -169,8 +169,9 @@
   }
 }
 
-/* ── Global Careers Toast ── */
-.careers-toast {
+/* ── Global Careers & Insights Toast ── */
+.careers-toast,
+.insights-toast {
   position: fixed;
   bottom: 2rem;
   left: 50%;
@@ -186,12 +187,14 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
-.careers-toast.show {
+.careers-toast.show,
+.insights-toast.show {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
 }
 
-.careers-toast p {
+.careers-toast p,
+.insights-toast p {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   text-transform: uppercase;

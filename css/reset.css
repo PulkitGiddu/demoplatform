@@ -1,5 +1,5 @@
 /* ========================================
-   Wynklo — CSS Reset
+   Wynklo - CSS Reset
    ======================================== */
 
 *,
@@ -28,7 +28,7 @@ body {
   position: relative;
 }
 
-/* Noise texture overlay for the dark background — matches original site */
+/* Noise texture overlay for the dark background - matches original site */
 body::before {
   content: '';
   position: fixed;

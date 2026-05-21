@@ -1,5 +1,5 @@
 /* ========================================
-   Wynklo — Preloader Module
+   Wynklo - Preloader Module
    ======================================== */
 
 export function initPreloader() {

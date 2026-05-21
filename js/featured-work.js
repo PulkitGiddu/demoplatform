@@ -1,61 +1,123 @@
 /* ========================================
-   Wynklo — Featured Work Scroll Effect
-   + Cursor-following "View All Work" on hero image
+   Wynklo - Interactive Tab-Slider Controller
    ======================================== */
 
 export function initFeaturedWork() {
-  // ── Featured Work heading fade ──
-  const header = document.getElementById('featured-work-header');
-  const heading = document.getElementById('featured-work-heading');
-  const section = document.getElementById('featured-work');
+  const container = document.querySelector('#featured-work');
+  if (!container) return;
 
-  if (header && heading && section) {
-    function updateHeading() {
-      const firstCard = section.querySelector('.project-card');
-      if (!firstCard) return;
+  const tabs = container.querySelectorAll('.slider-tab');
+  const details = container.querySelectorAll('.slider-detail-pane');
+  const panels = container.querySelectorAll('.slider-panel');
+  const track = container.querySelector('.featured-slider-track');
+  const progressBar = container.querySelector('.slider-progress-bar');
+  const prevBtn = container.querySelector('.slider-arrow.prev');
+  const nextBtn = container.querySelector('.slider-arrow.next');
 
-      const headerRect = header.getBoundingClientRect();
-      const cardRect = firstCard.getBoundingClientRect();
-      const headingBottom = headerRect.top + headerRect.height;
-      const fadeStart = headingBottom + 100;
-      const fadeEnd = headerRect.top;
+  if (!track || tabs.length === 0) return;
 
-      if (cardRect.top >= fadeStart) {
-        heading.style.opacity = 1;
-        heading.style.transform = 'scale(1)';
-      } else if (cardRect.top <= fadeEnd) {
-        heading.style.opacity = 0;
-        heading.style.transform = 'scale(0.95)';
-      } else {
-        const progress = (fadeStart - cardRect.top) / (fadeStart - fadeEnd);
-        const clamped = Math.max(0, Math.min(1, progress));
-        heading.style.opacity = 1 - clamped;
-        heading.style.transform = `scale(${1 - clamped * 0.05})`;
-      }
+  let currentIndex = 0;
+  const totalSlides = tabs.length;
+  let autoplayTimer = null;
+
+  function goToSlide(index) {
+    // Keep index in bounds
+    if (index < 0) {
+      index = totalSlides - 1;
+    } else if (index >= totalSlides) {
+      index = 0;
     }
 
-    window.addEventListener('scroll', updateHeading, { passive: true });
-    updateHeading();
-  }
+    currentIndex = index;
 
-  // ── Cursor-following "View All Work" on hero image ──
-  const heroCard = document.querySelector('.hero-image-card');
-  const heroCta = document.querySelector('.hero-card-cta');
+    // 1. Move track (4 slides total, each takes 25% of the 400% track width)
+    const offset = index * 25;
+    track.style.transform = `translateX(-${offset}%)`;
 
-  if (heroCard && heroCta) {
-    heroCard.addEventListener('mousemove', (e) => {
-      const rect = heroCard.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      heroCta.style.left = x + 'px';
-      heroCta.style.top = y + 'px';
+    // 2. Toggle active tab styling
+    tabs.forEach((tab, idx) => {
+      if (idx === index) {
+        tab.classList.add('active');
+      } else {
+        tab.classList.remove('active');
+      }
     });
 
-    // Click on the card navigates to work page
-    heroCard.addEventListener('click', (e) => {
-      if (e.target.tagName !== 'A') {
-        window.location.href = '/work.html';
+    // 3. Toggle active detail texts
+    details.forEach((detail, idx) => {
+      if (idx === index) {
+        detail.classList.add('active');
+      } else {
+        detail.classList.remove('active');
       }
+    });
+
+    // 4. Toggle active visual panel state
+    panels.forEach((panel, idx) => {
+      if (idx === index) {
+        panel.classList.add('active');
+      } else {
+        panel.classList.remove('active');
+      }
+    });
+
+    // 5. Update bottom slider progress bar
+    if (progressBar) {
+      progressBar.style.width = `${((index + 1) / totalSlides) * 100}%`;
+    }
+  }
+
+  // Bind direct tab clicking
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      goToSlide(index);
+      resetAutoplay();
+    });
+  });
+
+  // Bind arrow click controls
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      goToSlide(currentIndex - 1);
+      resetAutoplay();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      goToSlide(currentIndex + 1);
+      resetAutoplay();
+    });
+  }
+
+  // Autoplay function
+  function startAutoplay() {
+    autoplayTimer = setInterval(() => {
+      goToSlide(currentIndex + 1);
+    }, 7000); // 7s interval
+  }
+
+  function resetAutoplay() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+    }
+    startAutoplay();
+  }
+
+  // Start autoplay immediately
+  startAutoplay();
+
+  // Pause autoplay on mouse hovering the visual viewport
+  const rightPanel = container.querySelector('.featured-slider-right');
+  if (rightPanel) {
+    rightPanel.addEventListener('mouseenter', () => {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    });
+    rightPanel.addEventListener('mouseleave', () => {
+      startAutoplay();
     });
   }
 }

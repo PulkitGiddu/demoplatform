@@ -1,5 +1,5 @@
 /* ========================================
-   Wynklo — Multi-Step Wizard
+   Wynklo - Multi-Step Wizard
    ======================================== */
 
 .wizard-section {
@@ -389,7 +389,10 @@
 
 .spinner-ring {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-top-color: var(--color-yellow);
@@ -398,7 +401,8 @@
 
 .spinner-core {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
@@ -420,16 +424,29 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes pulse {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
-  50% { transform: translate(-50%, -50%) scale(1.5); opacity: 1; }
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
 }
 
 @keyframes shine {
-  to { background-position: 200% center; }
+  to {
+    background-position: 200% center;
+  }
 }
 
 /* ── Interactive Phone Mockup (Step 4) ── */
@@ -459,7 +476,7 @@
   border: 8px solid #222;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.6), inset 0 0 15px rgba(255,255,255,0.05);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.05);
   margin-top: var(--space-xl);
   flex-shrink: 0;
 }
@@ -475,7 +492,7 @@
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   z-index: 10;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .mac-mockup {
@@ -484,10 +501,10 @@
   height: 450px;
   background: #0f1014;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 40px 80px rgba(0,0,0,0.7);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7);
   margin-top: var(--space-xl);
   display: flex;
   flex-direction: column;
@@ -499,7 +516,7 @@
   display: flex;
   align-items: center;
   padding: 0 15px;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .mac-traffic-lights {
@@ -512,20 +529,29 @@
   height: 12px;
   border-radius: 50%;
 }
-.mac-traffic-lights span:nth-child(1) { background: #ff5f56; }
-.mac-traffic-lights span:nth-child(2) { background: #ffbd2e; }
-.mac-traffic-lights span:nth-child(3) { background: #27c93f; }
+
+.mac-traffic-lights span:nth-child(1) {
+  background: #ff5f56;
+}
+
+.mac-traffic-lights span:nth-child(2) {
+  background: #ffbd2e;
+}
+
+.mac-traffic-lights span:nth-child(3) {
+  background: #27c93f;
+}
 
 .mac-address-bar {
   flex: 1;
   text-align: center;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   margin: 0 20px;
   border-radius: 6px;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   padding: 4px 0;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .mac-screen {
@@ -541,7 +567,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .mac-nav {
@@ -552,8 +578,9 @@
 .mac-nav .mockup-nav-item {
   font-family: var(--font-heading);
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
+
 .mac-nav .mockup-nav-item.active {
   color: var(--color-yellow);
 }
@@ -582,7 +609,7 @@
 .mockup-toggle {
   width: 40px;
   height: 22px;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 11px;
   position: relative;
   cursor: pointer;
@@ -616,7 +643,7 @@
 
 .mockup-list-item:active {
   transform: scale(0.98);
-  background: rgba(255,255,255,0.05) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 
 .mockup-btn.loading {
@@ -638,7 +665,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .mockup-header h4 {
@@ -654,7 +681,10 @@
 
 .mockup-view {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 20px;
   overflow-y: auto;
   scrollbar-width: none;
@@ -670,10 +700,12 @@
   transform: translateX(0);
 }
 
-.mockup-view::-webkit-scrollbar { display: none; }
+.mockup-view::-webkit-scrollbar {
+  display: none;
+}
 
 .mockup-hero {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   height: 120px;
   border-radius: var(--radius-md);
   display: flex;
@@ -700,7 +732,7 @@
 .mockup-item-img {
   width: 50px;
   height: 50px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-sm);
 }
 
@@ -713,12 +745,17 @@
 
 .mockup-line {
   height: 8px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
 }
 
-.mockup-line.long { width: 80%; }
-.mockup-line.short { width: 50%; }
+.mockup-line.long {
+  width: 80%;
+}
+
+.mockup-line.short {
+  width: 50%;
+}
 
 .mockup-btn {
   width: 100%;
@@ -732,6 +769,7 @@
   cursor: pointer;
   transition: transform 0.1s;
 }
+
 .mockup-btn:active {
   transform: scale(0.98);
 }
@@ -740,18 +778,19 @@
   display: flex;
   justify-content: space-around;
   padding: 15px 20px 25px;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   background: var(--color-bg-card);
 }
 
 .mockup-nav-item {
   font-size: 1.2rem;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   transition: color 0.3s;
 }
 
-.mockup-nav-item.active, .mockup-nav-item:hover {
+.mockup-nav-item.active,
+.mockup-nav-item:hover {
   color: var(--color-yellow);
 }
 

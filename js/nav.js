@@ -1,5 +1,5 @@
 /* ========================================
-   Wynklo — Navigation Interactions
+   Wynklo - Navigation Interactions
    ======================================== */
 
 export function initNav() {
@@ -169,10 +169,10 @@ export function initNav() {
       mobileServicesToggle.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        
+
         // Hide mobile nav first
         toggleMobileMenu(true);
-        
+
         // Small delay to allow mobile nav to start closing, then open mega menu
         setTimeout(() => {
           if (megaMenu) {

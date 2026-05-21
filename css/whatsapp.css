@@ -1,5 +1,5 @@
 /* ========================================
-   Wynklo — WhatsApp Floating Button
+   Wynklo - WhatsApp Floating Button
    ======================================== */
 
 .whatsapp-float {
@@ -57,6 +57,7 @@
     transform: scale(1);
     opacity: 1;
   }
+
   100% {
     transform: scale(1.4);
     opacity: 0;

@@ -1,5 +1,5 @@
 /* ========================================
-   Wynklo — Services Section
+   Wynklo - Services Section
    ======================================== */
 
 .services-section {
@@ -94,7 +94,7 @@
   flex-grow: 1;
 }
 
-.service-link {
+.service-feature {
   display: flex;
   align-items: center;
   gap: 0.6em;
@@ -105,28 +105,17 @@
   letter-spacing: 0.06em;
   color: var(--color-text);
   border-bottom: 1px solid rgba(243, 241, 231, 0.1);
-  transition: gap 0.3s var(--ease-out), color 0.3s;
+  cursor: default;
 }
 
-.service-link:last-child {
+.service-feature:last-child {
   border-bottom: none;
 }
 
-.service-link::before {
+.service-feature::before {
   content: '→';
   font-size: 0.9em;
-  transition: transform 0.3s var(--ease-out);
   opacity: 0.5;
-}
-
-.service-link:hover {
-  gap: 1em;
-  color: var(--color-yellow);
-}
-
-.service-link:hover::before {
-  opacity: 1;
-  transform: translateX(3px);
 }
 
 .service-card-cta {

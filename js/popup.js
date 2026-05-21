@@ -1,5 +1,5 @@
 /* ========================================
-   Wynklo — Sticky CTA Popup
+   Wynklo - Sticky CTA Popup
    ======================================== */
 
 export function initPopup() {

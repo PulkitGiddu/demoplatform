@@ -1,5 +1,5 @@
 /* ========================================
-   Wynklo — Brand Preloader
+   Wynklo - Brand Preloader
    ======================================== */
 
 /* Prevent content flash while loading */
@@ -7,7 +7,7 @@ body.loading {
   overflow: hidden;
 }
 
-body.loading > *:not(.preloader) {
+body.loading>*:not(.preloader) {
   opacity: 0;
 }
 
@@ -52,11 +52,23 @@ body.loading > *:not(.preloader) {
 }
 
 @keyframes preloaderPulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
 }
 
 @keyframes preloaderBar {
-  0% { transform: scaleX(0); }
-  100% { transform: scaleX(1); }
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
 }
