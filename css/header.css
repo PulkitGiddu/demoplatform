@@ -34,12 +34,23 @@
   transform: translateY(-100%);
 }
 
-/* When mega menu is open, header text becomes dark */
+/* When mega menu is open, header text becomes dark and background becomes solid yellow to blend seamlessly with the mega menu */
+.site-header.menu-open {
+  background: var(--color-yellow) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
 .site-header.menu-open .logo,
 .site-header.menu-open .nav-link,
 .site-header.menu-open .nav-link::after {
   color: #000 !important;
   background-color: transparent;
+}
+
+.site-header.menu-open .nav-link:hover {
+  color: rgba(0, 0, 0, 0.6) !important;
 }
 
 .site-header.menu-open .nav-link::after {
@@ -48,6 +59,17 @@
 
 .site-header.menu-open .menu-toggle span {
   background: #000 !important;
+}
+
+.site-header.menu-open .header-cta {
+  color: #000 !important;
+  border-color: #000 !important;
+  box-shadow: none !important;
+}
+
+.site-header.menu-open .header-cta:hover {
+  background: #000 !important;
+  color: var(--color-yellow) !important;
 }
 
 .header-inner {
