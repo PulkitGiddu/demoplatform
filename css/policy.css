@@ -1,0 +1,234 @@
+/* ========================================
+   Wynklo - Document & Policy Page Styles
+   ======================================== */
+
+.policy-page {
+  padding-top: calc(var(--header-height) + 4rem);
+  padding-bottom: var(--space-4xl);
+  background: var(--color-bg);
+  min-height: 80vh;
+}
+
+.policy-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.policy-header {
+  margin-bottom: var(--space-3xl);
+  border-bottom: 1px solid rgba(243, 241, 231, 0.1);
+  padding-bottom: var(--space-xl);
+}
+
+.policy-date {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.policy-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-text);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.policy-intro {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Content styling */
+.policy-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.policy-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.policy-section h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-xs);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.policy-section h2::before {
+  content: '//';
+  color: var(--color-yellow);
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+.policy-section h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin-top: var(--space-xs);
+}
+
+.policy-section p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.policy-section ul, 
+.policy-section ol {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-xs) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.policy-section li {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.policy-section li::before {
+  content: '→';
+  color: var(--color-yellow);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  margin-top: 0.1rem;
+}
+
+/* Glassmorphic Callout Cards */
+.policy-callout {
+  background: rgba(253, 208, 17, 0.03);
+  border: 1px solid rgba(253, 208, 17, 0.12);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-md) 0;
+}
+
+.policy-callout h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--color-yellow);
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.policy-callout p {
+  font-size: 0.95rem;
+  color: rgba(243, 241, 231, 0.8);
+  margin: 0;
+}
+
+/* Sitemap Specific Styles */
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2xl);
+  margin-top: var(--space-xl);
+}
+
+@media (max-width: 768px) {
+  .sitemap-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+.sitemap-group {
+  background: rgba(243, 241, 231, 0.02);
+  border: 1px solid rgba(243, 241, 231, 0.05);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transition: all 0.3s var(--ease-out);
+}
+
+.sitemap-group:hover {
+  border-color: rgba(253, 208, 17, 0.2);
+  background: rgba(253, 208, 17, 0.01);
+}
+
+.sitemap-group h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-yellow);
+  border-bottom: 1px solid rgba(243, 241, 231, 0.08);
+  padding-bottom: var(--space-xs);
+  margin: 0;
+}
+
+.sitemap-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sitemap-link {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--color-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color 0.3s;
+  padding: 4px 0;
+}
+
+.sitemap-link:hover {
+  color: var(--color-yellow);
+}
+
+.sitemap-link .arrow {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s var(--ease-out);
+}
+
+.sitemap-link:hover .arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sitemap-description {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: -8px;
+  line-height: 1.4;
+}
